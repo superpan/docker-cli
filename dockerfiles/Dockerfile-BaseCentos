@@ -1,0 +1,9 @@
+FROM centos:6.4
+# add repo
+# epel
+RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+
+# run yum install of basic stuff
+# group install
+RUN yum groupinstall -y “Development tools”
+RUN yum install -y nodejs npm which git
